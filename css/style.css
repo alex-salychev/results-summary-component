@@ -28,6 +28,10 @@ ol {
   --theme-color: #cac9ff;
   --sub-theme-color: #ffffff;
   --accent-theme-color: #303b59;
+  --reaction-color: #f55;
+  --memory-color: #ffb21e;
+  --verbal-color: #00bb8f;
+  --visual-color: #1125d6;
   /* margins */
   --mb-xs: 10px;
   --mb-sm: 15px;
@@ -38,6 +42,8 @@ ol {
   mb: 10px, 15px, 25px, 35px, 40px
   mb: xs, sm, md, lg, xl,
 
+  font-size: 16px, 18px, 24px, 56px
+  font-size: sm, md, lg, xl,
   */
 }
 
@@ -76,6 +82,7 @@ body {
   color: var(--theme-color);
   text-transform: capitalize;
 }
+
 .result__score {
   display: flex;
   flex-direction: column;
@@ -85,22 +92,26 @@ body {
   margin-bottom: 25px;
   background: url("../img/oval.svg") no-repeat;
 }
+
 .result__current-score {
   font-size: 56px;
   font-weight: 800;
   color: var(--sub-theme-color);
 }
-.result___max-score {
+
+.result__max-score {
   font-size: 16px;
   font-weight: 700;
   color: var(--theme-color);
 }
+
 .result__eval {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 700;
   color: var(--sub-theme-color);
 }
+
 .result__eval-analysis {
   margin-bottom: 15px;
   font-size: 16px;
@@ -109,3 +120,58 @@ body {
 }
 
 /* || SUMMARY div */
+.summary {
+  padding: 25px 30px 30px;
+}
+
+.summary__title {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.summary__list {
+  font-size: 16px;
+}
+
+.summary__item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.summary__reaction {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    var(--reaction-color);
+}
+
+.summary__memory {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    var(--memory-color);
+}
+
+.summary__verbal {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    var(--verbal-color);
+}
+
+.summary__visual {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    ),
+    var(--visual-color);
+}
