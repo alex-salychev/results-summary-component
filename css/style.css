@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700&family=Outfit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap");
 
 /* || RESET */
 *,
@@ -20,17 +20,92 @@ ol {
   list-style-type: none;
 }
 
-/* VARIABLES */
+/* || VARIABLES */
 :root {
   /* fonts */
   --ff: "Hanken Grotesk", sans-serif;
+  /* colors */
+  --theme-color: #cac9ff;
+  --sub-theme-color: #ffffff;
+  --accent-theme-color: #303b59;
+  /* margins */
+  --mb-xs: 10px;
+  --mb-sm: 15px;
+  --mb-md: 25px;
+  --mb-lg: 35px;
+  --mb-xl: 40px;
+  /*
+  mb: 10px, 15px, 25px, 35px, 40px
+  mb: xs, sm, md, lg, xl,
+
+  */
 }
 
-/* GENERAL STYLES */
+/* || GENERAL STYLES */
 html {
   font-family: var(--ff);
 }
 
-/* @media */
-@media screen and (min-width: 375px) {
+body {
+  background-color: #d8d9da;
 }
+
+/* || OUTCOME div */
+.outcome {
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: var(--sub-theme-color);
+}
+
+/* || RESULT div */
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 55px;
+  background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  text-align: center;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+
+.result__title {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--theme-color);
+  text-transform: capitalize;
+}
+.result__score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 25px;
+  background: url("../img/oval.svg") no-repeat;
+}
+.result__current-score {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--sub-theme-color);
+}
+.result___max-score {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--theme-color);
+}
+.result__eval {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--sub-theme-color);
+}
+.result__eval-analysis {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--theme-color);
+}
+
+/* || SUMMARY div */
