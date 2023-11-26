@@ -65,10 +65,15 @@ font-size: sm, md, lg, xl,
 fs-desktop: 18px, 24px, 32px, 72px
 fs-mobile: 16px, 18px, 24px, 56px,
 */
-  --fs-sm: 16px;
+  /* --fs-sm: 16px;
   --fs-md: 18px;
   --fs-lg: 24px;
-  --fs-xl: 56px;
+  --fs-xl: 56px; */
+
+  --fs-sm: clamp(16px, 1.75vw, 18px);
+  --fs-md: clamp(18px, 2vw, 24px);
+  --fs-lg: clamp(24px, 2.7vw, 32px);
+  --fs-xl: clamp(56px, 6vw, 72px);
 
   /* borders */
   --border-radius: 32px;
@@ -124,7 +129,7 @@ body {
   width: 140px;
   height: 140px;
   margin-bottom: var(--mb-lg);
-  background: url("../img/oval.svg") no-repeat;
+  background: url("../img/oval_mobile.svg") no-repeat;
 }
 
 .result__current-score {
@@ -274,12 +279,12 @@ transition the opacity of the top element
 }
 
 /* @media */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 40em) {
   :root {
-    --fs-sm: 18px;
+    /* --fs-sm: 18px;
     --fs-md: 24px;
     --fs-lg: 32px;
-    --fs-xl: 72px;
+    --fs-xl: 72px; */
 
     --mb-sm: 15px;
     --mb-md: 30px;
@@ -305,6 +310,12 @@ transition the opacity of the top element
   .result,
   .summary {
     flex-basis: 50%;
+  }
+
+  .result__score {
+    width: 200px;
+    height: 200px;
+    background: url("../img/oval_desktop.svg") no-repeat;
   }
 
   .summary__list {
