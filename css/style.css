@@ -50,33 +50,19 @@ button {
     rgba(255, 255, 255, 0.95) 0%,
     rgba(255, 255, 255, 0.95) 100%
   );
-  /* margins */
-  /*
-  mb: xs, sm, md, lg, xl,
-  mb-mobile: 10px 15px 25px 
-  mb-desktop: 15px 30px 35px 40px
-  */
-  --mb-sm: 10px;
-  --mb-md: 15px;
-  --mb-lg: 25px;
+  /* borders */
+  --border-radius: 32px;
 
   /*
 font-size: sm, md, lg, xl,
 fs-desktop: 18px, 24px, 32px, 72px
 fs-mobile: 16px, 18px, 24px, 56px,
-*/
-  /* --fs-sm: 16px;
-  --fs-md: 18px;
-  --fs-lg: 24px;
-  --fs-xl: 56px; */
-
+The font-size responsiveness appears between 1200px and 900px approximately. 
+  */
   --fs-sm: clamp(16px, 1.75vw, 18px);
   --fs-md: clamp(18px, 2vw, 24px);
   --fs-lg: clamp(24px, 2.7vw, 32px);
   --fs-xl: clamp(56px, 6vw, 72px);
-
-  /* borders */
-  --border-radius: 32px;
 }
 
 /* UTILITY CLASSES */
@@ -115,7 +101,7 @@ body {
 }
 
 .result__title {
-  margin-bottom: var(--mb-lg);
+  margin-bottom: 25px;
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   color: var(--theme-color);
@@ -128,7 +114,7 @@ body {
   justify-content: center;
   width: 140px;
   height: 140px;
-  margin-bottom: var(--mb-lg);
+  margin-bottom: 25px;
   background: url("../img/oval_mobile.svg") no-repeat;
 }
 
@@ -145,7 +131,7 @@ body {
 }
 
 .result__eval {
-  margin-bottom: var(--mb-sm);
+  margin-bottom: 10px;
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--sub-theme-color);
@@ -163,7 +149,7 @@ body {
 }
 
 .summary__title {
-  margin-bottom: var(--mb-lg);
+  margin-bottom: 25px;
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
 }
@@ -171,8 +157,8 @@ body {
 .summary__list {
   display: flex;
   flex-direction: column;
-  gap: var(--mb-md);
-  margin-bottom: var(--mb-lg);
+  gap: 15px;
+  margin-bottom: 25px;
   font-size: var(--fs-sm);
 }
 
@@ -280,18 +266,6 @@ transition the opacity of the top element
 
 /* @media */
 @media screen and (min-width: 40em) {
-  :root {
-    /* --fs-sm: 18px;
-    --fs-md: 24px;
-    --fs-lg: 32px;
-    --fs-xl: 72px; */
-
-    --mb-sm: 15px;
-    --mb-md: 30px;
-    --mb-lg: 35px;
-    --mb-xl: 40px;
-  }
-
   body {
     display: flex;
     flex-direction: column;
@@ -318,8 +292,24 @@ transition the opacity of the top element
     background: url("../img/oval_desktop.svg") no-repeat;
   }
 
+  .result__title {
+    margin-bottom: 25px;
+  }
+
+  .result__score {
+    margin-bottom: 25px;
+  }
+
+  .result__eval {
+    margin-bottom: 10px;
+  }
+
+  .summary__title {
+    margin-bottom: 25px;
+  }
+
   .summary__list {
-    margin-bottom: var(--mb-xl);
+    margin-bottom: 40px;
   }
 
   .summary__btn {
