@@ -164,6 +164,9 @@ body {
 }
 
 .summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-md);
   margin-bottom: var(--mb-lg);
   font-size: var(--fs-sm);
 }
@@ -171,7 +174,6 @@ body {
 .summary__item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--mb-md);
   padding: 15px;
   border-radius: 12px;
 }
